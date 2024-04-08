@@ -43,8 +43,6 @@ List<Employee> _paginatedEmployee = [];
 class _MyHomePageState extends State<MyHomePage> {
   List<GridColumn> columns = [];
   late EmployeeDataSource employeeDataSource;
-  bool showCheckboxColumn = false;
-  int i = 10;
 
   @override
   void initState() {
@@ -92,9 +90,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget _buildDataGrid(BoxConstraints constraint) {
     return SfDataGrid(
-      allowSorting: true,
-      allowFiltering: true,
-      showCheckboxColumn: showCheckboxColumn,
       source: employeeDataSource,
       columnWidthMode: ColumnWidthMode.fill,
       columns: columns,
